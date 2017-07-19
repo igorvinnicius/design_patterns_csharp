@@ -10,7 +10,7 @@ namespace design_patterns.Creational.Tests
 		public void A_BMWFactory_Should_Return_A_BMW_Instance()
 		{
 			//Arrange
-			IAutoFactory autoFactory = new BMWFactory();
+			AutoFactory autoFactory = new BMWFactory();
 
 			//Act
 			var expectedInstance = autoFactory.CreateAutoMobile();
@@ -27,7 +27,7 @@ namespace design_patterns.Creational.Tests
 		public void An_AudiFactory_Should_Return_An_Audi_Instance()
 		{
 			//Arrange
-			IAutoFactory autoFactory = new AudiFactory();
+			AutoFactory autoFactory = new AudiFactory();
 
 			//Act
 			var expectedInstance = autoFactory.CreateAutoMobile();

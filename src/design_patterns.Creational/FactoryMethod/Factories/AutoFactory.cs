@@ -2,8 +2,8 @@
 
 namespace design_patterns.Creational.FactoryMethod.Factories
 {
-    public interface IAutoFactory
+    public abstract class AutoFactory
     {
-		 IAuto CreateAutoMobile();
+		 public abstract IAuto CreateAutoMobile();
     }
 }

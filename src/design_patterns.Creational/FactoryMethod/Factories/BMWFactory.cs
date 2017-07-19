@@ -5,9 +5,9 @@ using design_patterns.Creational.FactoryMethod.Autos;
 
 namespace design_patterns.Creational.FactoryMethod.Factories
 {
-	public class BMWFactory : IAutoFactory
+	public class BMWFactory : AutoFactory
 	{
-		public IAuto CreateAutoMobile()
+		public override IAuto CreateAutoMobile()
 		{
 			return new BMW();
 		}
