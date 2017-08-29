@@ -13,6 +13,7 @@ namespace design_patterns.Behavioral.ChainOfResponsibility.Handlers
 		public ExpenseHandler(IExpenseApprover expenseApprover)
 		{
 			_approver = expenseApprover;
+			_next = EndOfChainExpenseHandler.Instance;
 		}
 
 		public ApprovalResponse Approve(IExpenseReport expenseReport)

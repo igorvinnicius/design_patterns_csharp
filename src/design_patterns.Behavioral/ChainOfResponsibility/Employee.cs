@@ -4,7 +4,7 @@ using System.Text;
 
 namespace design_patterns.Behavioral.ChainOfResponsibility
 {
-    public class Employee
+    public class Employee : IExpenseApprover
     {
 		public string Name { get; set; }
 
@@ -16,5 +16,14 @@ namespace design_patterns.Behavioral.ChainOfResponsibility
 			ApprovalLimit = approvalLimit;
 		}
 
+		public ApprovalResponse ApproveExpense(IExpenseReport expenseReport)
+		{
+			if (ApprovalLimit < expenseReport.ExpenseAmount)
+			{
+				return ApprovalResponse.BeyondApprovalLimit;
+			}
+
+			return ApprovalResponse.Approved;
+		}
 	}
 }

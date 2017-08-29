@@ -7,7 +7,8 @@ namespace design_patterns.Behavioral.ChainOfResponsibility
     public enum ApprovalResponse
     {
 		BeyondApprovalLimit,
-		Approved
+		Approved,
+		Denied
 
     }
 }
