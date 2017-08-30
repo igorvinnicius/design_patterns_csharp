@@ -4,7 +4,12 @@ using System.Text;
 
 namespace design_patterns.Structural.Adapter
 {
-    class ImageTarget
+    public interface ImageTarget
     {
-    }
+		void LoadImage(string path);
+
+		void DrawImage(int posX, int posY, int height, int witdh);
+
+
+	}
 }
