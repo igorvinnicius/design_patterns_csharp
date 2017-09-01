@@ -14,6 +14,7 @@ namespace design_patterns.Behavioral.State
 		public Rover()
 		{
 			Direction = Direction.North;
+			RoverDirection = new RoverNorth();
 		}
 
 		public void TurnLeft()
